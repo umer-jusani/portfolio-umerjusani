@@ -1,18 +1,8 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
-import { Dancing_Script, Lato, Libre_Bodoni } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 
-const lato = Lato({
-    subsets: ["latin"],
-    weight: ["400", "700", "900"],
-});
-const libreBodoni = Libre_Bodoni({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-});
-const dancingScript = Dancing_Script({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans" });
 
 let theme = createTheme({
     components: {
@@ -38,7 +28,7 @@ let theme = createTheme({
         },
     },
     typography: {
-        fontFamily: `${lato.style.fontFamily}, ${libreBodoni.style.fontFamily}, ${dancingScript.style.fontFamily}`,
+        fontFamily: `${inter.style.fontFamily}, ${openSans.style.fontFamily}`,
         Regular: 400,
         Medium: 500,
         SemiBold: 600,
@@ -68,9 +58,10 @@ let theme = createTheme({
             default: "#1e1e28",
             paper: "#12121a",
             light: "#242430",
-            dark: "#12121a",
+            dark: "#20202a",
             card: "#2b2b36"
-        }
+        },
+        divider: "#2b2b36"
     },
 });
 
