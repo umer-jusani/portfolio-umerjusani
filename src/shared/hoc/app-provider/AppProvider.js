@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import UiThemeProvider from '../theme-provider/Theme-Provider';
+import StoreProvider from '../store-provider/storeContext';
 
 
 const AppProvider = ({ children }) => {
@@ -13,7 +14,9 @@ const AppProvider = ({ children }) => {
     if (!mounted) return null;
     return (
         <UiThemeProvider>
-            {children}
+            <StoreProvider>
+                {children}
+            </StoreProvider>
         </UiThemeProvider>
     )
 }

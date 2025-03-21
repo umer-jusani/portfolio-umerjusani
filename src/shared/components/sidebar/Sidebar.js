@@ -1,7 +1,8 @@
 "use client"
-import { ArticleIcon, FacebookIcon, GitHubIcon, InstagramIcon, LinkedInIcon, MediumIcon, user } from '@/shared/assets';
+import { drawerWidth } from '@/constant';
+import { FacebookIcon, GitHubIcon, InstagramIcon, LinkedInIcon, MediumIcon, user } from '@/shared/assets';
 import routes from '@/shared/route';
-import { Badge, styled, Stack, IconButton } from '@mui/material';
+import { IconButton, Stack, useMediaQuery } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,91 +14,24 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { StyledBadge, StyledDrawer, StyledUserProfile } from './Ui';
+import { useStore } from '@/shared/hoc/store-provider/storeContext';
 
-const drawerWidth = 280;
-
-const StyledBadge = styled(Badge)(({ theme }) => ({
-    '& .MuiBadge-badge': {
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.primary.main,
-        width: '15px',
-        height: '15px',
-        borderRadius: '50%',
-        boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
-        '&::after': {
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            borderRadius: '50%',
-            animation: 'ripple 1.2s infinite ease-in-out',
-            border: '1px solid currentColor',
-            content: '""',
-        },
-    },
-    '@keyframes ripple': {
-        '0%': {
-            transform: 'scale(.8)',
-            opacity: 1,
-        },
-        '100%': {
-            transform: 'scale(2.4)',
-            opacity: 0,
-        },
-    },
-}));
-
-const SmallAvatar = styled(Avatar)(({ theme }) => ({
-    width: 22,
-    height: 22,
-    border: `2px solid ${theme.palette.background.paper}`,
-}));
 
 export default function Sidebar() {
+    const pathname = usePathname();
+    const { isSidebarOpen, toggleSidebar } = useStore();
+    const mediaQuery = useMediaQuery('(min-width: 1070px)');
+
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <Drawer
-                sx={{
-                    width: drawerWidth,
-                    flexShrink: 0,
-                    '& .MuiDrawer-paper': {
-                        width: drawerWidth,
-                        boxSizing: 'border-box',
-                        bgcolor: 'background.dark',
-                        color: 'text.tertiary',
-                    },
-                }}
-                variant="permanent"
-                anchor="left"
-            >
-
-
-
-
-
-
-
+            <StyledDrawer open={isSidebarOpen} variant={mediaQuery ? "permanent" : "persistant"} anchor="left" onClose={toggleSidebar}>
                 <Stack>
                     {/* User Profile */}
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            py: 4,
-                            bgcolor: 'background.light',
-                            position: 'relative',
-                            gap: 1,
-                            // boxShadow: '0 8px 25px 0 #12121a',
-                            // backdropFilter: 'blur(2px)',
-                            // borderRadius: '10px',
-                            // border: '1px solid rgba(255, 255, 255, 0.18)'
-                        }}
-                    >
-
+                    <StyledUserProfile>
                         <StyledBadge
                             overlap="circular"
                             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
@@ -133,7 +67,7 @@ export default function Sidebar() {
                                 Front-end Engineer
                             </Typography>
                         </Stack>
-                    </Box>
+                    </StyledUserProfile>
 
                     {/* Residency */}
                     <Stack p={3} spacing={1}>
@@ -153,20 +87,52 @@ export default function Sidebar() {
                     <Divider />
 
                     {/* Routes */}
-                    <List sx={{ height: "30rem", overflow: "auto" }}>
-                        {routes.map((route, index) => (
-                            <ListItem key={route.name} disablePadding>
-                                <ListItemButton sx={{ py: 1.4 }}>
-                                    <ListItemIcon sx={{ color: 'text.tertiary' }}>
-                                        {route.icon}
-                                    </ListItemIcon>
-                                    <ListItemText primary={route.name} />
-                                </ListItemButton>
-                            </ListItem>
-                        ))}
+                    <List sx={{ mt: 1 }}>
+                        {routes.map((route, index) => {
+                            const isSelected = pathname === route.path;
+                            return (
+                                <ListItem key={route.name} disablePadding>
+                                    <Link href={route.path} style={{ width: '100%', textDecoration: 'none' }}>
+                                        <ListItemButton
+                                            sx={{
+                                                py: 1.4,
+                                                color: isSelected ? 'primary.main' : 'text.tertiary',
+                                                bgcolor: isSelected ? 'background.light' : 'transparent',
+                                                '&:hover': {
+                                                    bgcolor: 'background.light',
+                                                    color: 'primary.main',
+                                                    transition: 'all 0.3s ease-in-out',
+                                                    '& .MuiListItemIcon-root': {
+                                                        color: 'primary.main',
+                                                        transition: 'all 0.3s ease-in-out',
+                                                    }
+                                                },
+                                                '& .MuiListItemIcon-root': {
+                                                    color: isSelected ? 'primary.main' : 'text.tertiary',
+                                                },
+                                                borderRight: isSelected ? '3px solid' : 'none',
+                                                borderColor: 'primary.main',
+                                            }}
+                                        >
+                                            <ListItemIcon>
+                                                {route.icon}
+                                            </ListItemIcon>
+                                            <ListItemText
+                                                primary={route.name}
+                                                sx={{
+                                                    '& .MuiTypography-root': {
+                                                        fontWeight: isSelected ? 600 : 400,
+                                                    }
+                                                }}
+                                            />
+                                        </ListItemButton>
+                                    </Link>
+                                </ListItem>
+                            );
+                        })}
                     </List>
-                    <Divider />
 
+                    <Divider />
 
                     {/* Social Media Icons */}
                     <Stack
@@ -196,7 +162,7 @@ export default function Sidebar() {
                     </Stack>
 
                 </Stack>
-            </Drawer>
+            </StyledDrawer>
         </Box >
     );
 }

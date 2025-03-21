@@ -31,41 +31,6 @@ const routes = [
         path: "/dashboard/blog",
         icon: <ArticleIcon />,
     },
-    {
-        name: "Blog",
-        path: "/dashboard/blog",
-        icon: <ArticleIcon />,
-    },
-    {
-        name: "Blog",
-        path: "/dashboard/blog",
-        icon: <ArticleIcon />,
-    },
-    {
-        name: "Blog",
-        path: "/dashboard/blog",
-        icon: <ArticleIcon />,
-    },
-    {
-        name: "Blog",
-        path: "/dashboard/blog",
-        icon: <ArticleIcon />,
-    },
-    {
-        name: "Blog",
-        path: "/dashboard/blog",
-        icon: <ArticleIcon />,
-    },
-    {
-        name: "Blog",
-        path: "/dashboard/blog",
-        icon: <ArticleIcon />,
-    },
-    {
-        name: "Blog",
-        path: "/dashboard/blog",
-        icon: <ArticleIcon />,
-    },
 
 ];
 

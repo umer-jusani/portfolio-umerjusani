@@ -10,10 +10,15 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MediumIcon from '@mui/icons-material/Language';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-export { AddHomeIcon, AccountCircleIcon, ContactIcon, ProjectIcon, DesignServicesOutlinedIcon, ArticleIcon, InstagramIcon, LinkedInIcon, GitHubIcon, MediumIcon, FacebookIcon }
+export { AddHomeIcon, AccountCircleIcon, ContactIcon, ProjectIcon, DesignServicesOutlinedIcon, ArticleIcon, InstagramIcon, LinkedInIcon, GitHubIcon, MediumIcon, FacebookIcon, MenuIcon, ChevronRightIcon }
 
 // import from local assets
-import user from "../assets/images/umer-jusani.jpg"
+import user from "./images/umer-jusani.jpg"
+import bannerImage from "./images/banner-image.jpg"
+import userBgLess from "./images/umer-jusani-bgless.png"
+import AvatarImage from "./images/avatar.webp"
 
-export { user }
+export { user, bannerImage, userBgLess, AvatarImage }
