@@ -20,5 +20,13 @@ import user from "./images/umer-jusani.jpg"
 import bannerImage from "./images/banner-image.jpg"
 import userBgLess from "./images/umer-jusani-bgless.png"
 import AvatarImage from "./images/avatar.webp"
+import MaterialUiIcon from "./images/material-ui-icon.svg"
+import FirebaseIcon from "./images/firebase-icon.svg"
+import CursorAiIcon from "./images/cursor-ai-icon.svg"
+import HtmlIcon from "./images/html-icon.svg"
+import CssIcon from "./images/css-icon.svg"
+import JsIcon from "./images/js-icon.svg"
+import TailwindIcon from "./images/tailwind-icon.svg"
+import BootstrapIcon from "./images/bootstrap-icon.svg"
 
-export { user, bannerImage, userBgLess, AvatarImage }
+export { user, bannerImage, userBgLess, AvatarImage, MaterialUiIcon, FirebaseIcon, CursorAiIcon, HtmlIcon, CssIcon, JsIcon, TailwindIcon, BootstrapIcon }

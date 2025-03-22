@@ -6,15 +6,14 @@ const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans" })
 
 let theme = createTheme({
     components: {
-        // MuiCssBaseline: {
-        //     styleOverrides: {
-        //         ".body": {
-        //             color: "rgba(34, 7, 7, 0.85) !important",
-        //             letterSpacing: "0.5px",
-        //             lineHeight: 1.6,
-        //         },
-        //     },
-        // },
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    textTransform: 'capitalize',
+                }
+            }
+        }
+
     },
     breakpoints: {
         values: {

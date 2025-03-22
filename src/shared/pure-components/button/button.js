@@ -12,10 +12,9 @@ let stylesOne = {
 }
 
 let stylesTwo = {
-    fontSize: 13,
     letterSpacing: 1.25,
     py: 1.25,
-    fontWeight: 600,
+    fontWeight: "bold",
     px: 4,
     borderRadius: 1.5
 }

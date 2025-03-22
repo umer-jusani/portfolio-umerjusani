@@ -1,23 +1,28 @@
 "use client"
+import { flowSpacer, SectionHeadingVariant, skills } from '@/constant'
+import { ContainerStack, SectionHeading } from '@/shared/global-styling/Ui'
 import UiButton from '@/shared/pure-components/button/button'
-import { Stack, Typography } from '@mui/material'
+import { IconButton, Stack, Tooltip, Typography } from '@mui/material'
+import Image from 'next/image'
 import { Background, CodeTag } from './Ui'
+
+
 
 const HomePage = () => {
     return (
         <>
             {/* Hero Section */}
             <Background spacing={2} sx={{ paddingInline: { xs: "2rem", md: "4rem" }, textAlign: { xs: "center", md: "center" } }}>
-                <Stack 
-                    spacing={6} 
-                    sx={{ 
+                <Stack
+                    spacing={6}
+                    sx={{
                         flex: '0 1 auto',
                         maxWidth: '900px',
                         alignItems: { xs: "center", md: "center" },
                     }}
                 >
                     <Typography variant="h2" fontWeight={"900"} color={"text.tertiary"}>Discover my Amazing Development Space!</Typography>
-                    <CodeTag sx={{  display: "flex",gap: "0.5rem" }}>
+                    <CodeTag sx={{ display: "flex", gap: "0.5rem" }}>
                         <span className="code-tag">
                             <span className="bracket">&lt;</span>
                             <span className="tag-name">code</span>
@@ -32,14 +37,70 @@ const HomePage = () => {
                     </CodeTag>
                     <UiButton variant='contained' sx={{ width: "fit-content" }}>Explore Now</UiButton>
                 </Stack>
-                {/* <Stack sx={{ display: { xs: "none", md: "flex" } }}>
-                    <Image
-                        style={{ width: "25rem", height: "25rem", scale: 1.1, objectFit: "contain", position: "relative", top: "-1rem" }}
-                        src={AvatarImage}
-                        alt="banner"
-                    />
-                </Stack> */}
             </Background>
+
+
+            {/* Skills Moving Cards Section */}
+            <Stack component={"section"} overflow={"hidden"}>
+                <ContainerStack textAlign={"center"} spacing={flowSpacer}>
+                    <SectionHeading variant={SectionHeadingVariant}>my skills</SectionHeading>
+                    <Stack direction={"row"} flexWrap={"wrap"} justifyContent={"center"} alignItems={"center"} gap={3}>
+                        {skills.map((item, idx) => (
+                            <IconButton
+                                key={idx}
+                                sx={{
+                                    mx: 3,
+                                    transition: 'all 0.3s ease-in-out',
+                                    borderRadius: '16px',
+                                    padding: '20px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    gap: '12px',
+                                    '&:hover': {
+                                        transform: 'translateY(-5px)',
+                                        scale: '1.05',
+                                        boxShadow: `0 0px 10px  ${item.color} `,
+                                    }
+                                }}
+                            >
+                                <Tooltip title={item.title} placement='top' arrow>
+                                    <div style={{ position: 'relative', width: '50px', height: '50px' }}>
+                                        <Image
+                                            src={item.icon}
+                                            alt={`${item.title.toLowerCase()}-icon`}
+                                            fill
+                                            style={{
+                                                objectFit: 'contain',
+                                                filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1))'
+                                            }}
+                                        />
+                                    </div>
+                                </Tooltip>
+                                <Typography
+                                    variant="subtitle1"
+                                    sx={{
+                                        color: 'text.primary',
+                                        fontWeight: 500,
+                                        fontSize: '0.9rem',
+                                        letterSpacing: '0.5px',
+                                        opacity: 0.9
+                                    }}
+                                >
+                                    {item.title}
+                                </Typography>
+                            </IconButton>
+                        ))}
+                    </Stack>
+                </ContainerStack>
+            </Stack>
+
+
+
+
+
+
+
         </>
     )
 }
