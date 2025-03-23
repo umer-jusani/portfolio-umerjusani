@@ -9,7 +9,6 @@ export const SectionHeading = styled(Typography)(({ theme }) => ({
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     textTransform: "capitalize",
-    // textAlign: "center",
 }))
 
 

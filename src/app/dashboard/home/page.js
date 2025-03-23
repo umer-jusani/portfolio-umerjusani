@@ -46,25 +46,26 @@ const HomePage = () => {
                     <SectionHeading variant={SectionHeadingVariant}>my skills</SectionHeading>
                     <Stack direction={"row"} flexWrap={"wrap"} justifyContent={"center"} alignItems={"center"} gap={3}>
                         {skills.map((item, idx) => (
-                            <IconButton
-                                key={idx}
-                                sx={{
-                                    mx: 3,
-                                    transition: 'all 0.3s ease-in-out',
-                                    borderRadius: '16px',
-                                    padding: '20px',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    gap: '12px',
-                                    '&:hover': {
-                                        transform: 'translateY(-5px)',
-                                        scale: '1.05',
-                                        boxShadow: `0 0px 10px  ${item.color} `,
-                                    }
-                                }}
-                            >
-                                <Tooltip title={item.title} placement='top' arrow>
+                            <Tooltip title={item.title} placement='top' arrow>
+                                <IconButton
+                                    key={idx}
+                                    sx={{
+                                        mx: 3,
+                                        transition: 'all 0.3s ease-in-out',
+                                        borderRadius: '16px',
+                                        padding: '20px',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        gap: '12px',
+                                        '&:hover': {
+                                            transform: 'translateY(-5px)',
+                                            scale: '1.05',
+                                            boxShadow: `0 0px 10px  ${item.color} `,
+                                        }
+                                    }}
+                                >
+
                                     <div style={{ position: 'relative', width: '50px', height: '50px' }}>
                                         <Image
                                             src={item.icon}
@@ -76,20 +77,8 @@ const HomePage = () => {
                                             }}
                                         />
                                     </div>
-                                </Tooltip>
-                                <Typography
-                                    variant="subtitle1"
-                                    sx={{
-                                        color: 'text.primary',
-                                        fontWeight: 500,
-                                        fontSize: '0.9rem',
-                                        letterSpacing: '0.5px',
-                                        opacity: 0.9
-                                    }}
-                                >
-                                    {item.title}
-                                </Typography>
-                            </IconButton>
+                                </IconButton>
+                            </Tooltip>
                         ))}
                     </Stack>
                 </ContainerStack>

@@ -14,7 +14,7 @@ export const skills = [
         color: "rgba(41, 182, 246, 0.4)"
     },
     {
-        title: "Cursor AI",
+        title: "Cursor AI (code editor)",
         icon: CursorAiIcon,
         color: "rgba(147, 155, 162, 0.4)"
     },
