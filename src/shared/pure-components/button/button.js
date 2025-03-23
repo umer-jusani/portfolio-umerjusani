@@ -1,4 +1,5 @@
-import { Button } from '@mui/material'
+"use client"
+import { Button, CircularProgress } from '@mui/material'
 import React from 'react'
 
 
@@ -19,10 +20,19 @@ let stylesTwo = {
     borderRadius: 1.5
 }
 
-const UiButton = ({ variant, color, icon, children, sx, ...props }) => {
+const UiButton = ({ variant, color, icon, children, sx, isLoading, startIcon, ...props }) => {
     return (
         <>
-            <Button variant={variant} color={color} sx={{...stylesTwo, ...sx}} endIcon={icon} {...props}>{children}</Button>
+            <Button variant={variant} color={color} sx={{ ...stylesTwo, ...sx }} endIcon={icon}
+                startIcon={
+                    isLoading ? (
+                        <CircularProgress size="1rem" pr="0.4rem" />
+                    ) : (
+                        startIcon
+                    )
+                }
+                disabled={isLoading}
+                {...props} >{children}</Button>
         </>
     )
 }
