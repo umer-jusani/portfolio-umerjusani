@@ -1,10 +1,19 @@
-import { BootstrapIcon, CssIcon, CursorAiIcon, FirebaseIcon, HtmlIcon, JsIcon, MaterialUiIcon, TailwindIcon } from "./shared/assets";
+import { BootstrapIcon, CssIcon, CursorAiIcon, FacebookIcon, FirebaseIcon, GitHubIcon, HtmlIcon, InstagramIcon, JsIcon, LinkedInIcon, MaterialUiIcon, MediumIcon, TailwindIcon } from "./shared/assets";
 
 export const drawerWidth = 280;
 export const flowSpacer = 6;
 export const ContainerSpacerY = "6rem";
 export const SectionHeadingVariant = "h3";
+export const pageTopSpacer = { md: 5, sm: 2, xs: 1 };
 
+
+export const socialMediaIcons = [
+    { icon: <LinkedInIcon />, name: 'Linkedin', link: "https://www.linkedin.com/in/umer-jusani/" },
+    { icon: <FacebookIcon />, name: 'Facebook', link: "https://www.facebook.com/profile.php?id=100009899801154" },
+    { icon: <InstagramIcon />, name: 'Instagram', link: "https://www.instagram.com/muhammadjusani/" },
+    { icon: <GitHubIcon />, name: 'GitHub', link: "https://github.com/umer-jusani?tab=repositories" },
+    { icon: <MediumIcon />, name: 'Medium', link: "https://medium.com/@umer.jusani.04" },
+];
 
 //MySkills
 export const skills = [

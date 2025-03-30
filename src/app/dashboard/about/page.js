@@ -1,11 +1,24 @@
-import { Typography } from '@mui/material';
-import React from 'react'
+"use client"
+import { pageTopSpacer, SectionHeadingVariant } from '@/constant';
+import SocialMediaSpeedDial from '@/shared/components/socailIcons-speedDial/socialMediaSpeedDial';
+import { SectionHeading } from '@/shared/global-styling/Ui';
+
+import { Stack } from '@mui/material';
+
+
+
+
 
 const About = () => {
   return (
-    <div>
-        <Typography variant='h4'>About</Typography>
-    </div>
+    <Stack my={pageTopSpacer} justifyContent={"center"} alignItems={"center"}>
+      <SectionHeading variant={SectionHeadingVariant}>about me</SectionHeading>
+
+
+      {/* social media links */}
+      <SocialMediaSpeedDial />
+
+    </Stack>
   )
 }
 

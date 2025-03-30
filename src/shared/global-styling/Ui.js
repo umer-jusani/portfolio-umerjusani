@@ -13,5 +13,6 @@ export const SectionHeading = styled(Typography)(({ theme }) => ({
 
 
 export const ContainerStack = styled(Stack)(({ theme }) => ({
-    paddingBlock: ContainerSpacerY
+    paddingBlock: ContainerSpacerY,
+    alignItems: "center"
 }))

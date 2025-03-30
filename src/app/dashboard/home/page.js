@@ -42,7 +42,7 @@ const HomePage = () => {
 
             {/* Skills Moving Cards Section */}
             <Stack component={"section"} overflow={"hidden"}>
-                <ContainerStack textAlign={"center"} spacing={flowSpacer}>
+                <ContainerStack spacing={flowSpacer}>
                     <SectionHeading variant={SectionHeadingVariant}>my skills</SectionHeading>
                     <Stack direction={"row"} flexWrap={"wrap"} justifyContent={"center"} alignItems={"center"} gap={3}>
                         {skills.map((item, idx) => (
@@ -83,13 +83,6 @@ const HomePage = () => {
                     </Stack>
                 </ContainerStack>
             </Stack>
-
-
-
-
-
-
-
         </>
     )
 }
