@@ -8,7 +8,7 @@ const SocialMediaSpeedDial = () => {
         <>
             <SpeedDial
                 ariaLabel="SpeedDial basic example"
-                sx={{ position: 'absolute', bottom: 25, right: 35, }}
+                sx={{ position: 'fixed', bottom: 25, right: 35, }}
                 icon={<ShareIcon />}
             >
                 {socialMediaIcons.map((action) => (

@@ -1,8 +1,8 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
 import { Inter, Open_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans" });
+const poppins = Inter({ subsets: ["latin"], variable: "--font-poppins" });
+const roboto = Open_Sans({ subsets: ["latin"], variable: "--font-roboto" });
 
 let theme = createTheme({
     components: {
@@ -27,7 +27,7 @@ let theme = createTheme({
         },
     },
     typography: {
-        fontFamily: `${inter.style.fontFamily}, ${openSans.style.fontFamily}`,
+        fontFamily: `${roboto.style.fontFamily}, ${poppins.style.fontFamily}`,
         Regular: 400,
         Medium: 500,
         SemiBold: 600,
@@ -51,7 +51,8 @@ let theme = createTheme({
         text: {
             primary: "#77777b",
             secondary: "#dadadc",
-            tertiary: "#fff"
+            tertiary: "#fff",
+            black: "#000"
         },
         background: {
             default: "#1e1e28",
