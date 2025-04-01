@@ -15,7 +15,7 @@ export default function DashboardLayout({ children }) {
             {/* Sidebar */}
             <Sidebar />
             {/* Main Content */}
-            <Box sx={{ width: mediaQuery ? `calc(100% - ${drawerWidth}px)` : "100%", justifySelf: "flex-end" }}>
+            <Box sx={{ width: mediaQuery ? `calc(100% - ${drawerWidth}px)` : "100%", justifySelf: "flex-end", backgroundColor: '#1E1E29' }}>
                 <IconButton sx={{ position: 'fixed', top: 15, left: 20 }} onClick={toggleSidebar}>
                     <MenuIcon sx={{ color: 'text.primary' }} fontSize="large" />
                 </IconButton>

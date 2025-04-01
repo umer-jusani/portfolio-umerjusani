@@ -1,9 +1,9 @@
 "use client"
-import { pageTopSpacer, SectionHeadingVariant } from '@/constant';
+import { flowSpacer, pageTopSpacer, SectionHeadingVariant } from '@/constant';
 import SocialMediaSpeedDial from '@/shared/components/socailIcons-speedDial/socialMediaSpeedDial';
 import { SectionHeading, SubSectionHeading } from '@/shared/global-styling/Ui';
-import { Paper, Stack, Typography, Chip, Modal, List, ListItem, ListItemIcon, ListItemText, Box } from '@mui/material';
-import { EmojiEvents, Rocket } from '@mui/icons-material';
+import { Paper, Stack, Typography, Chip, Modal, List, ListItem, ListItemIcon, ListItemText, Box, Container, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { EmojiEvents, Rocket, ArrowRight, ExpandMore } from '@mui/icons-material';
 import { useState } from 'react';
 import ModalWrapper from '@/shared/pure-components/modalwrapper/modalWrapper';
 
@@ -40,20 +40,28 @@ const LevelUpModal = ({ open, handleClose }) => {
         </Typography>
         <List>
           <ListItem>
-            <ListItemIcon>🔹</ListItemIcon>
-            <ListItemText primary="Picking up something new daily—because tech never stops evolving." />
+            <ListItemIcon>
+              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+            </ListItemIcon>
+            <Typography sx={{ color: 'text.secondary' }} variant='body2'>Picking up something new daily—because tech never stops evolving.</Typography>
           </ListItem>
           <ListItem>
-            <ListItemIcon>🔹</ListItemIcon>
-            <ListItemText primary="Finding and implementing smarter, cleaner ways to write code." />
+            <ListItemIcon>
+              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+            </ListItemIcon>
+            <Typography sx={{ color: 'text.secondary' }} variant='body2'>Finding and implementing smarter, cleaner ways to write code.</Typography>
           </ListItem>
           <ListItem>
-            <ListItemIcon>🔹</ListItemIcon>
-            <ListItemText primary="Using the right React design patterns where they actually make sense." />
+            <ListItemIcon>
+              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+            </ListItemIcon>
+            <Typography sx={{ color: 'text.secondary' }} variant='body2'>Using the right React design patterns where they actually make sense.</Typography>
           </ListItem>
           <ListItem>
-            <ListItemIcon>🔹</ListItemIcon>
-            <ListItemText primary="Keeping everything consistent, so the project feels polished and professional." />
+            <ListItemIcon>
+              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+            </ListItemIcon>
+            <Typography sx={{ color: 'text.secondary' }} variant='body2'>Keeping everything consistent, so the project feels polished and professional.</Typography>
           </ListItem>
         </List>
         <Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>
@@ -71,7 +79,7 @@ const About = () => {
   const handleCloseModal = () => setModalOpen(false);
 
   return (
-    <Stack my={pageTopSpacer} spacing={4}>
+    <Container maxWidth="lg" sx={{ my: pageTopSpacer }}>
 
       {/* Level Up Chip */}
       <Box
@@ -118,19 +126,27 @@ const About = () => {
         </Typography>
         <List>
           <ListItem>
-            <ListItemIcon>🔹</ListItemIcon>
+            <ListItemIcon>
+              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+            </ListItemIcon>
             <Typography sx={{ color: 'text.secondary' }} variant='body2'>Picking up something new daily—because tech never stops evolving.</Typography>
           </ListItem>
           <ListItem>
-            <ListItemIcon>🔹</ListItemIcon>
+            <ListItemIcon>
+              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+            </ListItemIcon>
             <Typography sx={{ color: 'text.secondary' }} variant='body2'>Finding and implementing smarter, cleaner ways to write code.</Typography>
           </ListItem>
           <ListItem>
-            <ListItemIcon>🔹</ListItemIcon>
+            <ListItemIcon>
+              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+            </ListItemIcon>
             <Typography sx={{ color: 'text.secondary' }} variant='body2'>Using the right React design patterns where they actually make sense.</Typography>
           </ListItem>
           <ListItem>
-            <ListItemIcon>🔹</ListItemIcon>
+            <ListItemIcon>
+              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+            </ListItemIcon>
             <Typography sx={{ color: 'text.secondary' }} variant='body2'>Keeping everything consistent, so the project feels polished and professional.</Typography>
           </ListItem>
         </List>
@@ -139,238 +155,263 @@ const About = () => {
         </Typography>
       </ModalWrapper>
 
-
       {/* Introduction */}
-      {/* <Paper elevation={3} sx={{ p: 4, maxWidth: '800px', width: '100%' }}> */}
-      <Stack alignItems={'center'}>
-        {/* Introduction Section */}
-        <SubSectionHeading
-          variant="h4"
-        >
-          Introduction
-        </SubSectionHeading>
-        <Typography variant="body1" paragraph>
-          Hi, I'm Muhammad Umer Jusani, a passionate Frontend Developer with 1.5 years of experience crafting high-performance web and mobile applications. I specialize in React.js, Next.js, React Native, and modern UI libraries like Material UI and Tailwind CSS.
-          <br />
-          <br />
-          My expertise includes responsive design, performance optimization, API integrations, authentication systems, and cloud storage solutions. I've worked with Stripe, Appwrite, Firebase, and Azure Microsoft B2C to create seamless and secure user experiences.
-          <br />
-          <br />
-          As a problem-solver and creative thinker, I thrive on building scalable, user-friendly solutions that drive business success. From developing portfolio websites to building complex web and mobile applications, I'm always eager to learn and contribute to impactful projects.
-        </Typography>
-
-        {/* Learning Platforms Section */}
-        <SubSectionHeading
-          variant="h4"
-          sx={{ mt: 6 }}
-        >
-          Learning Platforms
-        </SubSectionHeading>
-        <Stack spacing={2} width="100%" alignItems="flex-start">
-          <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            📌 <strong>Codedamn</strong> – Solving challenging problems with the best approaches.
-          </Typography>
-          <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            📌 <strong>Medium</strong> – Reading and writing articles on best coding practices, simplifying code, and making it more readable and scalable.
-          </Typography>
-          <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            📌 <strong>Kevin Powell (YouTube)</strong> – Learning modern CSS techniques and best practices.
-          </Typography>
-          <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            📌 <strong>Cosden Solutions (YouTube)</strong> – Best channel for React developers.
+      <Stack spacing={14}>
+        <Stack spacing={{ md: 5, xs: 2 }} alignItems="center">
+          <SubSectionHeading variant="h4">
+            Introduction
+          </SubSectionHeading>
+          <Typography variant="body1" paragraph color={'text.secondary'}>
+            Hi, I'm Muhammad Umer Jusani, a passionate Frontend Developer with 1.5 years of experience crafting high-performance web and mobile applications. I specialize in React.js, Next.js, React Native, and modern UI libraries like Material UI and Tailwind CSS.
+            <br />
+            <br />
+            My expertise includes responsive design, performance optimization, API integrations, authentication systems, and cloud storage solutions. I've worked with Stripe, Appwrite, Firebase, and Azure Microsoft B2C to create seamless and secure user experiences.
+            <br />
+            <br />
+            As a problem-solver and creative thinker, I thrive on building scalable, user-friendly solutions that drive business success. From developing portfolio websites to building complex web and mobile applications, I'm always eager to learn and contribute to impactful projects.
           </Typography>
         </Stack>
 
-        {/* Tools I Use Section */}
-        <SubSectionHeading
-          variant="h4"
-          sx={{ mt: 6 }}
-        >
-          The Tools I Use
-        </SubSectionHeading>
-        <Stack spacing={3} width="100%" alignItems="flex-start">
-          <Stack spacing={1} width="100%">
-            <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-              🛠️ <strong>Cursor AI Code Editor</strong> – My go-to coding assistant that has significantly boosted my development speed and productivity.
+        {/* Learning Platforms */}
+        <Stack spacing={{ md: 5, xs: 2 }} alignItems="center">
+          <SubSectionHeading variant="h4">
+            Learning Platforms
+          </SubSectionHeading>
+          <Stack spacing={1} width="100%" alignItems="flex-start">
+            <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <strong>Codedamn</strong> – Solving challenging problems with the best approaches.
             </Typography>
-            <List sx={{ pl: 8 }}>
-              <ListItem sx={{ display: 'flex', alignItems: 'flex-start', p: 0.5 }}>
-                <ListItemIcon sx={{ minWidth: '32px' }}>✅</ListItemIcon>
-                <Typography variant="body1">
-                  Reduces human effort by suggesting optimized code snippets.
-                </Typography>
-              </ListItem>
-              <ListItem sx={{ display: 'flex', alignItems: 'flex-start', p: 0.5 }}>
-                <ListItemIcon sx={{ minWidth: '32px' }}>✅</ListItemIcon>
-                <Typography variant="body1">
-                  I let Cursor write code when I know the approach, helping me focus on logic instead of syntax.
-                </Typography>
-              </ListItem>
-              <ListItem sx={{ display: 'flex', alignItems: 'flex-start', p: 0.5 }}>
-                <ListItemIcon sx={{ minWidth: '32px' }}>✅</ListItemIcon>
-                <Typography variant="body1">
-                  No need to constantly look up syntax—Cursor provides smart suggestions on the go.
-                </Typography>
-              </ListItem>
-            </List>
+            <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <strong>Medium</strong> – Reading and writing articles on best coding practices, simplifying code, and making it more readable and scalable.
+            </Typography>
+            <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <strong>Kevin Powell (YouTube)</strong> – Learning modern CSS techniques and best practices.
+            </Typography>
+            <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <strong>Cosden Solutions (YouTube)</strong> – Best channel for React developers.
+            </Typography>
           </Stack>
-          <Typography variant="body1" sx={{ pl: 8 }}>
-            With Cursor AI, I can code faster, stay focused, and build better applications without unnecessary distractions. 🚀
-          </Typography>
         </Stack>
 
-        {/* Types of Projects Section */}
-        <SubSectionHeading
-          variant="h4"
-          sx={{ mt: 6 }}
-        >
-          Types of Projects I Have Worked On
-        </SubSectionHeading>
-        
-        {/* XtecSoft Experience */}
-        <Stack spacing={3} width="100%" alignItems="flex-start">
-          <Stack spacing={2} width="100%">
-            <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-              📌 <strong>XtecSoft Experience (ioMovo – Cloud Storage Platform)</strong>
-            </Typography>
-            <Typography variant="body1" sx={{ pl: 4 }}>
-              At XtecSoft, I played a key role in developing ioMovo, a cloud storage platform similar to Google Drive but with unique capabilities.
-            </Typography>
-            
-            <Stack spacing={2} sx={{ pl: 4 }}>
-              <Typography variant="body1" sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                🔹 <strong>ioHub – Unified Cloud Storage Integration</strong>
+        {/* Tools I Use  */}
+        <Stack spacing={{ md: 5, xs: 2 }} alignItems="center">
+          <SubSectionHeading variant="h4">
+            The Tools I Use
+          </SubSectionHeading>
+          <Stack spacing={1} width="100%" alignItems="flex-start">
+            <Stack spacing={1} width="100%">
+              <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                <strong>Cursor AI Code Editor</strong> – My go-to coding assistant that has significantly boosted my development speed and productivity.
               </Typography>
-              <Typography variant="body1" sx={{ pl: 4 }}>
-                Developed ioHub, which integrates multiple external cloud platforms like AWS, Azure, and Google Drive.
-                Implemented a feature that allows users to authenticate and list all their files from a selected cloud provider.
-              </Typography>
-
-              <Typography variant="body1" sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                🔹 <strong>ioFlow – File Status Tracking System</strong>
-              </Typography>
-              <Typography variant="body1" sx={{ pl: 4 }}>
-                Designed and built the ioFlow section, allowing users to assign statuses (Needs Review, In Progress, Approved) to files and track them efficiently.
-              </Typography>
-
-              <Typography variant="body1" sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                🔹 <strong>Advanced React Development</strong>
-              </Typography>
-              <Typography variant="body1" sx={{ pl: 4 }}>
-                Created complex features using different React design patterns to ensure scalability and maintainability.
-                Built helper functions to optimize performance and enhance reusability.
-              </Typography>
+              <List sx={{ pl: 8 }}>
+                <ListItem sx={{ display: 'flex', alignItems: 'flex-start', p: 0.5 }}>
+                  <ListItemIcon sx={{ minWidth: '32px' }}>
+                    <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+                  </ListItemIcon>
+                  <Typography variant="body1">
+                    Reduces human effort by suggesting optimized code snippets.
+                  </Typography>
+                </ListItem>
+                <ListItem sx={{ display: 'flex', alignItems: 'flex-start', p: 0.5 }}>
+                  <ListItemIcon sx={{ minWidth: '32px' }}>
+                    <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+                  </ListItemIcon>
+                  <Typography variant="body1">
+                    I let Cursor write code when I know the approach, helping me focus on logic instead of syntax.
+                  </Typography>
+                </ListItem>
+                <ListItem sx={{ display: 'flex', alignItems: 'flex-start', p: 0.5 }}>
+                  <ListItemIcon sx={{ minWidth: '32px' }}>
+                    <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+                  </ListItemIcon>
+                  <Typography variant="body1">
+                    No need to constantly look up syntax—Cursor provides smart suggestions on the go.
+                  </Typography>
+                </ListItem>
+              </List>
             </Stack>
+            <Typography variant="body1" color={'text.secondary'} sx={{ pl: 8 }}>
+              With Cursor AI, I can code faster, stay focused, and build better applications without unnecessary distractions.
+            </Typography>
           </Stack>
+        </Stack>
 
-          {/* PNC Solutions Experience */}
-          <Stack spacing={2} width="100%">
-            <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-              📌 <strong>PNC Solutions Experience</strong>
-            </Typography>
-            <Typography variant="body1" sx={{ pl: 4 }}>
-              At PNC Solutions, I primarily focused on learning from senior developers and working on sample projects to enhance my technical skills.
-            </Typography>
-            <List sx={{ pl: 4 }}>
-              <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
-                <ListItemIcon sx={{ minWidth: '32px' }}>•</ListItemIcon>
-                <Typography variant="body1">
-                  Explored different development approaches and best practices.
+        {/* Types of Projects I Have Worked On */}
+        <Stack spacing={{ md: 5, xs: 2 }} alignItems="center">
+          <SubSectionHeading variant="h4">
+            Types of Projects I Have Worked On
+          </SubSectionHeading>
+          <Stack spacing={1} width="100%" alignItems="flex-start">
+            <Accordion sx={{ width: '100%' }}>
+              <AccordionSummary expandIcon={<ExpandMore sx={{ color: 'primary.main' }} />}>
+                <Typography variant="body1" color={'text.secondary'} fontWeight={"bold"}>
+                  XtecSoft Experience (ioMovo – Cloud Storage Platform)
                 </Typography>
-              </ListItem>
-              <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
-                <ListItemIcon sx={{ minWidth: '32px' }}>•</ListItemIcon>
-                <Typography variant="body1">
-                  Created small-scale projects for practice.
-                </Typography>
-              </ListItem>
-              <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
-                <ListItemIcon sx={{ minWidth: '32px' }}>•</ListItemIcon>
-                <Typography variant="body1">
-                  Couldn't continue working there due to a different tech stack from my primary expertise.
-                </Typography>
-              </ListItem>
-            </List>
-          </Stack>
+              </AccordionSummary>
+              <AccordionDetails>
+                {/* <Stack spacing={10}> */}
 
-          {/* Invention & Innovation Experience */}
-          <Stack spacing={2} width="100%">
-            <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-              📌 <strong>Invention & Innovation (Current Role)</strong>
-            </Typography>
-            <Typography variant="body1" sx={{ pl: 4, fontWeight: 500 }}>
-              Frontend Developer
-            </Typography>
-            
-            <Stack spacing={2} sx={{ pl: 4 }}>
-              <Typography variant="body1" sx={{ fontWeight: 500 }}>Projects Worked On:</Typography>
-              
-              <Stack spacing={1}>
-                <Typography variant="body1" sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
-                  🔹 <strong>WintechPro</strong>
-                </Typography>
-                <List sx={{ pl: 4 }}>
-                  <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
-                    <ListItemIcon sx={{ minWidth: '32px' }}>•</ListItemIcon>
-                    <Typography variant="body1">
-                      Developed and maintained the frontend for WintechPro, ensuring a seamless user experience.
+                <Stack spacing={3} >
+                  <Typography variant="body2" color={'text.secondary'}>
+                    At XtecSoft, I played a key role in developing ioMovo, a cloud storage platform similar to Google Drive but with unique capabilities.
+                  </Typography>
+                  <Stack spacing={1}>
+                    <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center' }}>
+                      <ArrowRight sx={{ color: 'primary.main', fontSize: 22 }} />
+                      ioHub – Unified Cloud Storage Integration
                     </Typography>
-                  </ListItem>
-                  <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
-                    <ListItemIcon sx={{ minWidth: '32px' }}>•</ListItemIcon>
-                    <Typography variant="body1">
-                      Implemented responsive UI using modern web technologies.
+                    <Typography variant="body2" color={'text.primary'} sx={{ pl: 2 }}>
+                      Developed ioHub, which integrates multiple external cloud platforms like AWS, Azure, and Google Drive.
+                      Implemented a feature that allows users to authenticate and list all their files from a selected cloud provider.
                     </Typography>
-                  </ListItem>
-                  <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
-                    <ListItemIcon sx={{ minWidth: '32px' }}>•</ListItemIcon>
-                    <Typography variant="body1">
-                      Integrated APIs and enhanced the performance of web applications.
-                    </Typography>
-                  </ListItem>
-                </List>
+                  </Stack>
 
-                <Typography variant="body1" sx={{ display: 'flex', alignItems: 'flex-start', gap: 2, mt: 2 }}>
-                  🔹 <strong>TenderPro (Under Development)</strong>
+                  <Stack spacing={1}>
+                    <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center' }}>
+                      <ArrowRight sx={{ color: 'primary.main', fontSize: 22 }} />
+                      ioFlow – File Status Tracking System
+                    </Typography>
+                    <Typography variant="body2" color={'text.primary'} sx={{ pl: 2 }}>
+                      Designed and built the ioFlow section, allowing users to assign statuses (Needs Review, In Progress, Approved) to files and track them efficiently.
+                    </Typography>
+                  </Stack>
+
+                  <Stack spacing={1}>
+                    <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center' }}>
+                      <ArrowRight sx={{ color: 'primary.main', fontSize: 22 }} />
+                      Advanced React Development
+                    </Typography>
+                    <Typography variant="body2" color={'text.primary'} sx={{ pl: 2 }}>
+                      Created complex features using different React design patterns to ensure scalability and maintainability.
+                      Built helper functions to optimize performance and enhance reusability.
+                    </Typography>
+                  </Stack>
+                </Stack>
+                {/* </Stack> */}
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion sx={{ width: '100%' }}>
+              <AccordionSummary expandIcon={<ExpandMore sx={{ color: 'primary.main' }} />}>
+                <Typography variant="body1" color={'text.secondary'} sx={{ fontWeight: 'bold' }}>
+                  PNC Solutions Experience
                 </Typography>
-                <List sx={{ pl: 4 }}>
-                  <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
-                    <ListItemIcon sx={{ minWidth: '32px' }}>•</ListItemIcon>
-                    <Typography variant="body1">
-                      Built the frontend for TenderPro, a B2B platform where companies can list and bid on tenders.
+              </AccordionSummary>
+              <AccordionDetails>
+                <Stack spacing={2}>
+                  <Typography variant="body1" color={'text.secondary'}>
+                    At PNC Solutions, I primarily focused on learning from senior developers and working on sample projects to enhance my technical skills.
+                  </Typography>
+                  <List>
+                    <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                      <ListItemIcon sx={{ minWidth: '32px' }}>
+                        <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+                      </ListItemIcon>
+                      <Typography variant="body1">
+                        Explored different development approaches and best practices.
+                      </Typography>
+                    </ListItem>
+                    <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                      <ListItemIcon sx={{ minWidth: '32px' }}>
+                        <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+                      </ListItemIcon>
+                      <Typography variant="body1">
+                        Created small-scale projects for practice.
+                      </Typography>
+                    </ListItem>
+                    <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                      <ListItemIcon sx={{ minWidth: '32px' }}>
+                        <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+                      </ListItemIcon>
+                      <Typography variant="body1">
+                        Couldn't continue working there due to a different tech stack from my primary expertise.
+                      </Typography>
+                    </ListItem>
+                  </List>
+                </Stack>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion sx={{ width: '100%' }}>
+              <AccordionSummary expandIcon={<ExpandMore sx={{ color: 'primary.main' }} />}>
+                <Typography variant="body1" color={'text.secondary'} sx={{ fontWeight: 'bold' }}>
+                  Invention & Innovation (Current Role)
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+
+                <Stack spacing={3}>
+                  {/* WindtechPro */}
+                  <Stack spacing={1}>
+                    <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center' }}>
+                      <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+                      WintechPro
                     </Typography>
-                  </ListItem>
-                  <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
-                    <ListItemIcon sx={{ minWidth: '32px' }}>•</ListItemIcon>
-                    <Typography variant="body1">
-                      Integrated Stripe Payment Gateway, allowing users to save their bank account details for future payments using Setup Intent.
+                    {/* <Typography variant="body1" color={'text.secondary'} sx={{ pl: 2 }}>
+                    A comprehensive web application focused on providing seamless user experience and modern UI/UX.
+                  </Typography> */}
+                    <List sx={{ pl: 2, py: 0 }}>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Developed and maintained frontend with focus on performance optimization
+                        </Typography>
+                      </ListItem>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Implemented responsive UI using React.js and Material-UI
+                        </Typography>
+                      </ListItem>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Integrated RESTful APIs and optimized data fetching patterns
+                        </Typography>
+                      </ListItem>
+                    </List>
+                  </Stack>
+
+                  {/* TenderPro */}
+                  <Stack spacing={1}>
+                    <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center' }}>
+                      <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+                      TenderPro (Under Development)
                     </Typography>
-                  </ListItem>
-                  <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
-                    <ListItemIcon sx={{ minWidth: '32px' }}>•</ListItemIcon>
-                    <Typography variant="body1">
-                      Developed authentication and role-based access control for Super Admins, Organizations, and Transporters.
-                    </Typography>
-                  </ListItem>
-                  <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
-                    <ListItemIcon sx={{ minWidth: '32px' }}>•</ListItemIcon>
-                    <Typography variant="body1">
-                      Implemented dashboards displaying statistics like active tenders, bidding analytics, and user engagement.
-                    </Typography>
-                  </ListItem>
-                </List>
-              </Stack>
-            </Stack>
+                    {/* <Typography variant="body2" color={'text.secondary'} sx={{ pl: 2 }}>
+                    A B2B platform enabling companies to list and participate in tender bidding processes.
+                  </Typography> */}
+                    <List sx={{ pl: 2, py: 0 }}>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Built robust frontend architecture using Next.js and TypeScript
+                        </Typography>
+                      </ListItem>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Integrated Stripe Payment Gateway with Setup Intent for secure transactions
+                        </Typography>
+                      </ListItem>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Implemented role-based authentication system with multiple user types
+                        </Typography>
+                      </ListItem>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Created interactive dashboards with real-time analytics and statistics.
+                        </Typography>
+                      </ListItem>
+                    </List>
+                  </Stack>
+                </Stack>
+
+              </AccordionDetails>
+            </Accordion>
           </Stack>
         </Stack>
       </Stack>
 
-
-
-
       {/* social media links */}
       <SocialMediaSpeedDial />
-    </Stack>
+    </Container>
   )
 }
 
