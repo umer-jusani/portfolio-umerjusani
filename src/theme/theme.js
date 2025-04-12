@@ -27,7 +27,7 @@ let theme = createTheme({
         },
     },
     typography: {
-        fontFamily: `${roboto.style.fontFamily}, ${poppins.style.fontFamily}`,
+        fontFamily: `'Livvic', ${roboto.style.fontFamily}, ${poppins.style.fontFamily}`,
         Regular: 400,
         Medium: 500,
         SemiBold: 600,
