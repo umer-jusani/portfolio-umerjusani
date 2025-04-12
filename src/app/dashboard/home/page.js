@@ -19,6 +19,7 @@ const HomePage = () => {
                         flex: '0 1 auto',
                         maxWidth: '900px',
                         alignItems: { xs: "center", md: "center" },
+                        zIndex: 1,
                     }}
                 >
                     <Typography variant="h2" fontWeight={"900"} color={"text.tertiary"}>Discover my Amazing Development Space!</Typography>

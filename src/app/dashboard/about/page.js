@@ -1,77 +1,13 @@
 "use client"
-import { flowSpacer, pageTopSpacer, SectionHeadingVariant } from '@/constant';
+import { pageTopSpacer } from '@/constant';
 import SocialMediaSpeedDial from '@/shared/components/socailIcons-speedDial/socialMediaSpeedDial';
-import { SectionHeading, SubSectionHeading } from '@/shared/global-styling/Ui';
-import { Paper, Stack, Typography, Chip, Modal, List, ListItem, ListItemIcon, ListItemText, Box, Container, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
-import { EmojiEvents, Rocket, ArrowRight, ExpandMore } from '@mui/icons-material';
-import { useState } from 'react';
+import { SubSectionHeading } from '@/shared/global-styling/Ui';
 import ModalWrapper from '@/shared/pure-components/modalwrapper/modalWrapper';
+import { ArrowRight, ExpandMore, Rocket } from '@mui/icons-material';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Chip, Container, List, ListItem, ListItemIcon, Stack, Typography } from '@mui/material';
+import { useState } from 'react';
 
-const LevelUpModal = ({ open, handleClose }) => {
-  return (
-    <Modal
-      open={open}
-      onClose={handleClose}
-      aria-labelledby="level-up-modal"
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
-      <Paper
-        elevation={24}
-        sx={{
-          p: 4,
-          maxWidth: '600px',
-          width: '90%',
-          maxHeight: '90vh',
-          overflow: 'auto',
-          bgcolor: 'background.paper',
-          borderRadius: 2,
-          position: 'relative'
-        }}
-      >
-        <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1, color: 'text.primary' }}>
-          <EmojiEvents sx={{ color: 'primary.main' }} /> How I Level Up Every Day
-        </Typography>
-        <Typography variant="body1" color="text.secondary" paragraph>
-          For me, coding is more than just writing lines of code—it's about getting better every single day. Here's what keeps me going:
-        </Typography>
-        <List>
-          <ListItem>
-            <ListItemIcon>
-              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
-            </ListItemIcon>
-            <Typography sx={{ color: 'text.secondary' }} variant='body2'>Picking up something new daily—because tech never stops evolving.</Typography>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
-            </ListItemIcon>
-            <Typography sx={{ color: 'text.secondary' }} variant='body2'>Finding and implementing smarter, cleaner ways to write code.</Typography>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
-            </ListItemIcon>
-            <Typography sx={{ color: 'text.secondary' }} variant='body2'>Using the right React design patterns where they actually make sense.</Typography>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon>
-              <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
-            </ListItemIcon>
-            <Typography sx={{ color: 'text.secondary' }} variant='body2'>Keeping everything consistent, so the project feels polished and professional.</Typography>
-          </ListItem>
-        </List>
-        <Typography variant="body1" color="text.secondary" sx={{ mt: 2 }}>
-          It's all about growing, refining, and making every project better than the last.
-        </Typography>
-      </Paper>
-    </Modal>
-  );
-};
-
+ 
 const About = () => {
   const [modalOpen, setModalOpen] = useState(false);
 

@@ -27,7 +27,6 @@ const Background = styled(Box)(({ theme }) => ({
     justifyContent: 'center', 
     alignItems: 'center',
     paddingBlock: '6rem',
-    
     '&::before': {
         content: '""',
         position: 'absolute',
@@ -40,7 +39,7 @@ const Background = styled(Box)(({ theme }) => ({
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        zIndex: -1,
+        // zIndex: -1,
     }
 }));
 
