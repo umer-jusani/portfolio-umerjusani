@@ -1,1 +1,21 @@
- 
+.overlay {
+  border-image: linear-gradient(
+      hsla(240, 15%, 9%, 0.3),
+      hsla(240, 12%, 7%, 0.3)
+    )
+    fill 1;
+}
+
+/* outer */
+/* .glass-effect {
+  backdrop-filter: blur(5px);
+  background-color: #cbcbcb1a;
+} */
+
+/* inner */
+.glass-effect {
+  backdrop-filter: blur(5px);
+  background-color: #cbcbcb1a;
+  border-radius: 10px;
+  padding: var(--spacing, 10px);
+}

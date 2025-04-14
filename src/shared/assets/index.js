@@ -33,6 +33,12 @@ import CssIcon from "./images/css-icon.svg"
 import JsIcon from "./images/js-icon.svg"
 import TailwindIcon from "./images/tailwind-icon.svg"
 import BootstrapIcon from "./images/bootstrap-icon.svg"
-// social media icons
+// project images
+import DisneyClone from "./images/disney-clone.png"
+import FarCry4 from "./images/farCry4.png"
+import Foodies from "./images/foodies1.png"
+import LinkedinClone from "./images/linkedinClone.png"
+import ManageProducts from "./images/manageProducts.png"
+import QuicApp from "./images/quiz.png"
 
-export { user, bannerImage, userBgLess, AvatarImage, MaterialUiIcon, FirebaseIcon, CursorAiIcon, HtmlIcon, CssIcon, JsIcon, TailwindIcon, BootstrapIcon }
+export { user, bannerImage, userBgLess, AvatarImage, MaterialUiIcon, FirebaseIcon, CursorAiIcon, HtmlIcon, CssIcon, JsIcon, TailwindIcon, BootstrapIcon, DisneyClone, FarCry4, Foodies, LinkedinClone, ManageProducts, QuicApp }
