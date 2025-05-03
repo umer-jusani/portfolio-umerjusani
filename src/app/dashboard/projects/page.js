@@ -7,10 +7,14 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { motion } from 'framer-motion';
 import { ProjectCardStyles } from './Ui'
+import { projects } from '@/constant'
 
 const ProjectCard = motion(Card);
 
 const Page = () => {
+    
+    console.log(projects, "project")
+    
     return (
         <Container maxWidth="lg" sx={{ my: pageTopSpacer }}>
             {/* Section Heading */}
@@ -18,7 +22,7 @@ const Page = () => {
                 variant={SectionHeadingVariant} 
                 sx={{ 
                     mb: 4,
-                    textAlign: 'center',
+                    // textAlign: 'center',
                     fontSize: { xs: '2rem', md: '2.5rem' }
                 }}
             >
@@ -26,7 +30,7 @@ const Page = () => {
             </SectionHeading>
 
             {/* Projects Grid */}
-            <Grid container spacing={3} justifyContent="center">
+            <Grid container spacing={3}>
                 <Grid item xs={12} sm={6} md={4}>
                     <ProjectCard
                         initial={{ opacity: 0, y: 20 }}
@@ -99,7 +103,7 @@ const Page = () => {
                             </Typography>
                             <Stack 
                                 direction="row" 
-                                spacing={1} 
+                                // spacing={1} 
                                 flexWrap="wrap"
                                 gap={1}
                             >
@@ -124,6 +128,9 @@ const Page = () => {
                     </ProjectCard>
                 </Grid>
             </Grid>
+
+
+
         </Container>
     )
 }
