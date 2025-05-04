@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+import LanguageIcon from '@mui/icons-material/Language';
 // social media icons
 // import mediumIcon from "./images/mediumIcon.png"
 import MediumIcon from '@mui/icons-material/Language';
@@ -18,7 +19,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import ShareIcon from '@mui/icons-material/Share';
 
-export { AddHomeIcon, AccountCircleIcon, ContactIcon, ProjectIcon, DesignServicesOutlinedIcon, ArticleIcon, InstagramIcon, LinkedInIcon, GitHubIcon, MediumIcon, FacebookIcon, MenuIcon, ChevronRightIcon, VisibilityIcon, VisibilityOffOutlinedIcon, ShareIcon }
+export { LanguageIcon, AddHomeIcon, AccountCircleIcon, ContactIcon, ProjectIcon, DesignServicesOutlinedIcon, ArticleIcon, InstagramIcon, LinkedInIcon, GitHubIcon, MediumIcon, FacebookIcon, MenuIcon, ChevronRightIcon, VisibilityIcon, VisibilityOffOutlinedIcon, ShareIcon }
 
 // import from local assets
 import user from "./images/umer-jusani.jpg"

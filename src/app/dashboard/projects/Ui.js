@@ -5,6 +5,7 @@ export const ProjectCardStyles = {
     backdropFilter: 'blur(10px)',
     border: '1px solid rgba(255, 255, 255, 0.1)',
     transition: 'all 0.3s ease-in-out',
+    cursor: "pointer",
     '&:hover': {
         transform: 'translateY(-5px)',
         boxShadow: '0 10px 20px rgba(0,0,0,0.2)',
