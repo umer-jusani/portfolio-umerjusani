@@ -21,16 +21,16 @@ const routes = [
         path: "/dashboard/projects",
         icon: <ProjectIcon />,
     },
-    {
-        name: "Services",
-        path: "/dashboard/services",
-        icon: <DesignServicesOutlinedIcon />,
-    },
-    {
-        name: "Blog",
-        path: "/dashboard/blog",
-        icon: <ArticleIcon />,
-    },
+    // {
+    //     name: "Services",
+    //     path: "/dashboard/services",
+    //     icon: <DesignServicesOutlinedIcon />,
+    // },
+    // {
+    //     name: "Blog",
+    //     path: "/dashboard/blog",
+    //     icon: <ArticleIcon />,
+    // },
 
 ];
 
