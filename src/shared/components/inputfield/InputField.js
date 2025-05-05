@@ -23,6 +23,7 @@ const InputField = ({
     return (
       <TextField
         type={type}
+        name={name} // ✅ Required for form submission!
         error={rest.error}
         helperText={rest.errorMessage}
         label={label}

@@ -121,7 +121,7 @@ export const projects = [
         title: "Linkedin Clone",
         image: LinkedinClone.src,
         description: "Linkedin Clone is a web application that allows users to watch Linkedin movies and shows.",
-        link: "https://careerbridge-umer.netlify.app/home",
+        link: "https://careerbridge-umer.netlify.app",
         technologies: [
             {
                 title: "React",
