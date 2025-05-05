@@ -2,12 +2,10 @@
 import { pageTopSpacer, projects, SectionHeadingVariant } from '@/constant'
 import ProjectCard from '@/shared/components/project-card/projectCard'
 import { SectionHeading } from '@/shared/global-styling/Ui'
-import { Container, Grid, Stack } from '@mui/material'
+import { Container, Stack, Grid } from '@mui/material'
 
 
 const Page = () => {
-
-    console.log(projects, "project")
 
     return (
         <Container maxWidth="xl" sx={{ my: pageTopSpacer }}>
@@ -23,11 +21,14 @@ const Page = () => {
             </SectionHeading>
 
             {/* Projects Grid */}
-            <Stack direction={"row"} flexWrap={"wrap"} gap={{ md: 4, xs: 1 }}>
+            {/* <Stack direction={"row"} flexWrap={"wrap"} gap={{ md: 4, xs: 1 }}> */}
+                <Grid container spacing={3}>
                 {projects?.map(ele => (
                     <ProjectCard ele={ele} />
                 ))}
-            </Stack>
+                </Grid>
+                 
+            {/* </Stack> */}
 
 
 

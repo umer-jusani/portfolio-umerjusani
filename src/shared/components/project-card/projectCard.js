@@ -1,5 +1,5 @@
 "use client";
-import { Card, CardContent, CardMedia, Grid, IconButton, Stack, Tooltip, Typography } from '@mui/material'
+import { Card, CardContent, CardMedia, IconButton, Stack, Tooltip, Typography, Grid } from '@mui/material'
 import { motion } from 'framer-motion';
 import React from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -12,7 +12,7 @@ const AnimProjectCard = motion(Card);
 
 const ProjectCard = ({ ele = {} }) => {
     return (
-        <Stack width={"min(400px, 600px)"}>
+        <Grid item lg={4} sm={6} xs={12}>
             <AnimProjectCard
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -119,7 +119,7 @@ const ProjectCard = ({ ele = {} }) => {
                     </Stack>
                 </CardContent>
             </AnimProjectCard>
-        </Stack>
+        </Grid>
     )
 }
 
