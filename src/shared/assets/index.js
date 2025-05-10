@@ -18,13 +18,17 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import ShareIcon from '@mui/icons-material/Share';
+import WorkIcon from '@mui/icons-material/Work';
+import SchoolIcon from '@mui/icons-material/School';
 
-export { LanguageIcon, AddHomeIcon, AccountCircleIcon, ContactIcon, ProjectIcon, DesignServicesOutlinedIcon, ArticleIcon, InstagramIcon, LinkedInIcon, GitHubIcon, MediumIcon, FacebookIcon, MenuIcon, ChevronRightIcon, VisibilityIcon, VisibilityOffOutlinedIcon, ShareIcon }
+export { LanguageIcon, AddHomeIcon, AccountCircleIcon, ContactIcon, ProjectIcon, DesignServicesOutlinedIcon, ArticleIcon, InstagramIcon, LinkedInIcon, GitHubIcon, MediumIcon, FacebookIcon, MenuIcon, ChevronRightIcon, VisibilityIcon, VisibilityOffOutlinedIcon, ShareIcon, WorkIcon, SchoolIcon }
 
 // import from local assets
 import user from "./images/umer-jusani.jpg"
 import bannerImage from "./images/banner-image.jpg"
 import userBgLess from "./images/umer-jusani-bgless.png"
+
+
 import AvatarImage from "./images/avatar.webp"
 import MaterialUiIcon from "./images/material-ui-icon.svg"
 import FirebaseIcon from "./images/firebase-icon.svg"

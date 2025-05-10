@@ -5,10 +5,14 @@ import UiButton from '@/shared/pure-components/button/button'
 import { IconButton, Stack, Tooltip, Typography } from '@mui/material'
 import Image from 'next/image'
 import { Background, CodeTag } from './Ui'
+import { useRouter } from 'next/navigation'
 
 
 
 const HomePage = () => {
+    const router = useRouter()
+
+
     return (
         <>
             {/* Hero Section */}
@@ -36,13 +40,13 @@ const HomePage = () => {
                             <span className="bracket">&gt;</span>
                         </span>
                     </CodeTag>
-                    <UiButton variant='contained' sx={{ width: "fit-content" }}>Explore Now</UiButton>
+                    <UiButton variant='contained' sx={{ width: "fit-content" }} onClick={() => router.push("/dashboard/about")}>Explore Now</UiButton>
                 </Stack>
             </Background>
 
 
             {/* Skills Moving Cards Section */}
-          
+
         </>
     )
 }

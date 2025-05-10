@@ -1,4 +1,4 @@
-import { AccountCircleIcon, AddHomeIcon, ContactIcon, ProjectIcon, DesignServicesOutlinedIcon, ArticleIcon } from "./assets";
+import { AccountCircleIcon, AddHomeIcon, ContactIcon, ProjectIcon, DesignServicesOutlinedIcon, ArticleIcon, WorkIcon, SchoolIcon } from "./assets";
 
 const routes = [
     {
@@ -21,6 +21,16 @@ const routes = [
         path: "/dashboard/projects",
         icon: <ProjectIcon />,
     },
+    {
+        name: "Experience",
+        path: "/dashboard/experience",
+        icon: <WorkIcon />,
+    },
+    {
+        name: "Education",
+        path: "/dashboard/education",
+        icon: <SchoolIcon />,
+    }
     // {
     //     name: "Services",
     //     path: "/dashboard/services",

@@ -5,6 +5,9 @@ export const flowSpacer = 6;
 export const ContainerSpacerY = "6rem";
 export const SectionHeadingVariant = "h3";
 export const pageTopSpacer = { md: 5, sm: 2, xs: 1 };
+export const belowHeadSpacerBottom = {
+    mb: { md: 4, xs: 2 },
+}
 
 
 export const socialMediaIcons = [
