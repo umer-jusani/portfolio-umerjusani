@@ -7,7 +7,7 @@ import { ArrowRight, ExpandMore, Rocket } from '@mui/icons-material';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Chip, Container, List, ListItem, ListItemIcon, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 
- 
+
 const About = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -186,7 +186,6 @@ const About = () => {
               </AccordionSummary>
               <AccordionDetails>
                 {/* <Stack spacing={10}> */}
-
                 <Stack spacing={3} >
                   <Typography variant="body2" color={'text.secondary'}>
                     At XtecSoft, I played a key role in developing ioMovo, a cloud storage platform similar to Google Drive but with unique capabilities.
@@ -333,6 +332,40 @@ const About = () => {
                       <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
                         <Typography variant="body2">
                           Created interactive dashboards with real-time analytics and statistics.
+                        </Typography>
+                      </ListItem>
+                    </List>
+                  </Stack>
+
+                  {/* extension */}
+                  {/* TenderPro */}
+                  <Stack spacing={1}>
+                    <Typography variant="body1" color={'text.secondary'} sx={{ display: 'flex', alignItems: 'center' }}>
+                      <ArrowRight sx={{ color: 'primary.main', fontSize: 20 }} />
+                      Smart Job Apply Extension (LinkedIn & Indeed)
+                    </Typography>
+                    {/* <Typography variant="body2" color={'text.secondary'} sx={{ pl: 2 }}>
+                    A B2B platform enabling companies to list and participate in tender bidding processes.
+                  </Typography> */}
+                    <List sx={{ pl: 2, py: 0 }}>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Developed a Chrome extension that automates job applications on LinkedIn and Indeed with a single click.
+                        </Typography>
+                      </ListItem>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Built a companion website to collect user context and preferences.
+                        </Typography>
+                      </ListItem>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Leveraged ChatGPT API to dynamically generate answers to job application questions in real-time.
+                        </Typography>
+                      </ListItem>
+                      <ListItem sx={{ display: 'flex', alignItems: 'center', p: 0.5 }}>
+                        <Typography variant="body2">
+                          Implemented seamless autofill functionality, eliminating the need for manual input during job applications.
                         </Typography>
                       </ListItem>
                     </List>
