@@ -8,8 +8,16 @@ const SocialMediaSpeedDial = () => {
         <>
             <SpeedDial
                 ariaLabel="SpeedDial basic example"
-                sx={{ position: 'fixed', bottom: 25, right: 35, }}
-                icon={<ShareIcon />}
+                sx={{
+                    position: 'fixed',
+                    bottom: 25,
+                    right: { md: 35, xs: 20 },
+                    '& .MuiFab-primary': {
+                        width: { xs: 40, md: 56 }, // smaller on mobile
+                        height: { xs: 40, md: 56 },
+                    },
+                }}
+                icon={<ShareIcon sx={{ fontSize: { md: "1.7rem", xs: "1.3rem" } }} />}
             >
                 {socialMediaIcons.map((action) => (
                     <SpeedDialAction

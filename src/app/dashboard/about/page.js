@@ -20,6 +20,7 @@ const About = () => {
       {/* Level Up Chip */}
       <Box
         sx={{
+          display: { md: "block", xs: "none" },
           position: 'fixed',
           top: '50px',
           right: '20px',
@@ -92,7 +93,7 @@ const About = () => {
       </ModalWrapper>
 
       {/* Introduction */}
-      <Stack spacing={14}>
+      <Stack spacing={{ lg: 14, md: 8, xs: 6 }}>
         <Stack spacing={{ md: 5, xs: 2 }} alignItems="center">
           <SubSectionHeading variant="h4">
             Introduction
