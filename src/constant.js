@@ -1,4 +1,4 @@
-import { BootstrapIcon, CssIcon, CursorAiIcon, DisneyClone, FacebookIcon, FarCry4, FirebaseIcon, GitHubIcon, HtmlIcon, InstagramIcon, JsIcon, LinkedinClone, LinkedInIcon, ManageProducts, MaterialUiIcon, MediumIcon, TailwindIcon } from "./shared/assets";
+import { BootstrapIcon, CssIcon, CursorAiIcon, DisneyClone, FacebookIcon, FarCry4, FirebaseIcon, GitHubIcon, HtmlIcon, InstagramIcon, JsIcon, LinkedinAutoApply, LinkedinClone, LinkedInIcon, ManageProducts, MaterialUiIcon, MediumIcon, TailwindIcon } from "./shared/assets";
 
 export const drawerWidth = 280;
 export const flowSpacer = 6;
@@ -144,6 +144,21 @@ export const projects = [
             },
             {
                 title: "Redux",
+                color: "rgba(0, 159, 188, 0.4)"
+            }
+        ]
+    },
+    {
+        title: "Linkedin Auto Apply Chrome Extension",
+        description: "Linkedin Auto Apply Chrome Extension is a chrome extension that allows users to apply to jobs on Linkedin automatically.",
+        // link: "https://careerbridge-umer.netlify.app",
+        technologies: [
+            {
+                title: "JavaScript",
+                color: "rgba(255, 214, 0, 0.4)"
+            },
+            {
+                title: "Chrome Extension",
                 color: "rgba(0, 159, 188, 0.4)"
             }
         ]

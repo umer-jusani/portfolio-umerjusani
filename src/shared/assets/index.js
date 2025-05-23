@@ -27,8 +27,6 @@ export { LanguageIcon, AddHomeIcon, AccountCircleIcon, ContactIcon, ProjectIcon,
 import user from "./images/umer-jusani.jpg"
 import bannerImage from "./images/banner-image.jpg"
 import userBgLess from "./images/umer-jusani-bgless.png"
-
-
 import AvatarImage from "./images/avatar.webp"
 import MaterialUiIcon from "./images/material-ui-icon.svg"
 import FirebaseIcon from "./images/firebase-icon.svg"
@@ -46,4 +44,4 @@ import LinkedinClone from "./images/linkedinClone.png"
 import ManageProducts from "./images/manageProducts.png"
 import QuicApp from "./images/quiz.png"
 
-export { user, bannerImage, userBgLess, AvatarImage, MaterialUiIcon, FirebaseIcon, CursorAiIcon, HtmlIcon, CssIcon, JsIcon, TailwindIcon, BootstrapIcon, DisneyClone, FarCry4, Foodies, LinkedinClone, ManageProducts, QuicApp }
+export { user, bannerImage, userBgLess, AvatarImage, MaterialUiIcon, FirebaseIcon, CursorAiIcon, HtmlIcon, CssIcon, JsIcon, TailwindIcon, BootstrapIcon, DisneyClone, FarCry4, Foodies, LinkedinClone, ManageProducts, QuicApp, }

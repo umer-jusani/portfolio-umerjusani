@@ -19,51 +19,62 @@ const ProjectCard = ({ ele = {} }) => {
                 transition={{ duration: 0.5 }}
                 sx={ProjectCardStyles}
             >
-                <CardMedia
-                    component="img"
-                    height="200"
-                    image={ele.image}
-                    alt="Disney Clone"
-                    sx={{
-                        objectFit: "cover"
-                    }}
-                />
-                <div className="project-overlay" style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    background: 'rgba(0,0,0,0.7)',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    opacity: 0,
-                    transition: 'opacity 0.3s ease-in-out'
-                }}>
-                    <Stack direction="row" spacing={2}>
-                        <Tooltip title="View Code">
-                            <IconButton
-                                sx={{
-                                    color: 'white',
-                                    '&:hover': { color: 'primary.main' }
-                                }}
-                            >
-                                <GitHubIcon />
-                            </IconButton>
-                        </Tooltip>
-                        <Tooltip title="Live Demo">
-                            <IconButton
-                                sx={{
-                                    color: 'white',
-                                    '&:hover': { color: 'primary.main' }
-                                }}
-                            >
-                                <LaunchIcon />
-                            </IconButton>
-                        </Tooltip>
-                    </Stack>
-                </div>
+                {ele.image ? (
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        image={ele.image}
+                        alt="Disney Clone"
+                        sx={{
+                            objectFit: "cover"
+                        }}
+                    />
+                ) : (
+                    <video controls height="200" width={"100%"}>
+                        <source src="/videos/linkedin-auto-apply.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                )}
+
+                {ele.image && (
+                    <div className="project-overlay" style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: 'rgba(0,0,0,0.7)',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        opacity: 0,
+                        transition: 'opacity 0.3s ease-in-out'
+                    }}>
+                        <Stack direction="row" spacing={2}>
+                            <Tooltip title="View Code">
+                                <IconButton
+                                    sx={{
+                                        color: 'white',
+                                        '&:hover': { color: 'primary.main' }
+                                    }}
+                                >
+                                    <GitHubIcon />
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title="Live Demo">
+                                <IconButton
+                                    sx={{
+                                        color: 'white',
+                                        '&:hover': { color: 'primary.main' }
+                                    }}
+                                >
+                                    <LaunchIcon />
+                                </IconButton>
+                            </Tooltip>
+                        </Stack>
+                    </div>
+                )}
+
                 <CardContent sx={{ p: 3 }}>
                     <Stack direction={"row"} alignItems={"center"} gap={1}>
                         <Typography
@@ -76,16 +87,18 @@ const ProjectCard = ({ ele = {} }) => {
                         >
                             {ele.title}
                         </Typography>
-                        <IconButton
-                            className='animate__animated animate__shakeX'
-                            sx={{
-                                color: 'primary.main',
-                                opacity: "0.7",
-                            }}
-                            onClick={() => window.open(ele.link, "_blank")}
-                        >
-                            <LanguageIcon />
-                        </IconButton>
+                        {ele.link ? (
+                            <IconButton
+                                className='animate__animated animate__shakeX'
+                                sx={{
+                                    color: 'primary.main',
+                                    opacity: "0.7",
+                                }}
+                                onClick={() => window.open(ele.link, "_blank")}
+                            >
+                                <LanguageIcon />
+                            </IconButton>
+                        ) : null}
                     </Stack>
                     <Typography
                         variant="body2"

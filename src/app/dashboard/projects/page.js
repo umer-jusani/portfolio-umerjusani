@@ -19,7 +19,7 @@ const Page = () => {
 
             {/* Projects Grid */}
             {/* <Stack direction={"row"} flexWrap={"wrap"} gap={{ md: 4, xs: 1 }}> */}
-            <Grid container spacing={3}>
+            <Grid container spacing={{ md: 3, xs: 2 }}>
                 {projects?.map(ele => (
                     <ProjectCard ele={ele} />
                 ))}
