@@ -26,11 +26,11 @@ const routes = [
         path: "/dashboard/experience",
         icon: <WorkIcon />,
     },
-    {
-        name: "Education",
-        path: "/dashboard/education",
-        icon: <SchoolIcon />,
-    },
+    // {
+    //     name: "Education",
+    //     path: "/dashboard/education",
+    //     icon: <SchoolIcon />,
+    // },
     // {
     //     name: "Services",
     //     path: "/dashboard/services",

@@ -98,7 +98,7 @@ export default function Sidebar() {
                         <Divider />
 
                         {/* Routes */}
-                        <List sx={{ mt: 1 }}>
+                        <List sx={{ mt: 1, }} >
                             {routes.map((route, index) => {
                                 const isSelected = pathname === route.path;
                                 return (
@@ -143,11 +143,11 @@ export default function Sidebar() {
                             })}
                         </List>
 
-                        <Divider />
 
 
                     </Box>
                 </Stack>
+
                 {/* Social Media Icons */}
                 <Stack
                     bgcolor={"background.light"}
