@@ -56,13 +56,13 @@ const Experience = () => {
                     >
                         <Card sx={{ borderRadius: 3, boxShadow: 3, transition: 'all 0.3s ease', '&:hover': { transform: 'scale(1.05)', boxShadow: 8 } }}>
                             <CardContent>
-                                <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                                    <Typography variant="h6">{exp.company}</Typography>
+                                <Box display={{ md: "flex" }} justifyContent="space-between" alignItems="center" mb={1}>
+                                    <Typography variant="h6" color={"text.tertiary"}>{exp.company}</Typography>
                                     <Typography variant="body2" color="text.secondary">
                                         {exp.date}
                                     </Typography>
                                 </Box>
-                                <Typography variant="subtitle1" color="text.primary" fontStyle="italic" gutterBottom>
+                                <Typography variant="subtitle1" color="text.secondary" fontStyle="italic">
                                     {exp.role}
                                 </Typography>
                                 <List dense>
