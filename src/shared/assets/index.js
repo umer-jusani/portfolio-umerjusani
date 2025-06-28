@@ -20,8 +20,9 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import ShareIcon from '@mui/icons-material/Share';
 import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
-export { LanguageIcon, AddHomeIcon, AccountCircleIcon, ContactIcon, ProjectIcon, DesignServicesOutlinedIcon, ArticleIcon, InstagramIcon, LinkedInIcon, GitHubIcon, MediumIcon, FacebookIcon, MenuIcon, ChevronRightIcon, VisibilityIcon, VisibilityOffOutlinedIcon, ShareIcon, WorkIcon, SchoolIcon }
+export { CloudUploadIcon, LanguageIcon, AddHomeIcon, AccountCircleIcon, ContactIcon, ProjectIcon, DesignServicesOutlinedIcon, ArticleIcon, InstagramIcon, LinkedInIcon, GitHubIcon, MediumIcon, FacebookIcon, MenuIcon, ChevronRightIcon, VisibilityIcon, VisibilityOffOutlinedIcon, ShareIcon, WorkIcon, SchoolIcon }
 
 // import from local assets
 import user from "./images/umer-jusani.jpg"

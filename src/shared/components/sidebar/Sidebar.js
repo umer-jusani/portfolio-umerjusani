@@ -1,6 +1,6 @@
 "use client"
 import { drawerWidth } from '@/constant';
-import { FacebookIcon, GitHubIcon, InstagramIcon, LinkedInIcon, MediumIcon, user } from '@/shared/assets';
+import { CloudUploadIcon, FacebookIcon, GitHubIcon, InstagramIcon, LinkedInIcon, MediumIcon, user } from '@/shared/assets';
 import routes from '@/shared/route';
 import { IconButton, Stack, useMediaQuery } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
@@ -83,6 +83,16 @@ export default function Sidebar() {
                             <Stack direction="row" justifyContent="space-between">
                                 <Typography variant="subtitle2">Age:</Typography>
                                 <Typography variant="subtitle2" color='text.primary'>21</Typography>
+                            </Stack>
+                            <Stack direction="row" justifyContent="space-between">
+                                <Typography variant="subtitle2">Resume:</Typography>
+                                <Typography variant="subtitle2" color='text.primary'>
+                                    <a href="/umer-jusani-cv.pdf" download style={{ textDecoration: 'none' }}>
+                                        <IconButton sx={{ padding: 0 }}>
+                                            <CloudUploadIcon fontSize='10' sx={{ color: 'text.primary' }} />
+                                        </IconButton>
+                                    </a>
+                                </Typography>
                             </Stack>
                         </Stack>
                         <Divider />
