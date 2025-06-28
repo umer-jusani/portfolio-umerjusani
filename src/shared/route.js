@@ -11,11 +11,11 @@ const routes = [
         path: "/dashboard/about",
         icon: <AccountCircleIcon />,
     },
-    {
-        name: "Contact",
-        path: "/dashboard/contact",
-        icon: <ContactIcon />,
-    },
+    // {
+    //     name: "Contact",
+    //     path: "/dashboard/contact",
+    //     icon: <ContactIcon />,
+    // },
     {
         name: "Projects",
         path: "/dashboard/projects",
@@ -30,7 +30,7 @@ const routes = [
         name: "Education",
         path: "/dashboard/education",
         icon: <SchoolIcon />,
-    }
+    },
     // {
     //     name: "Services",
     //     path: "/dashboard/services",
