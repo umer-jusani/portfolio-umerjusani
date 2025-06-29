@@ -1,7 +1,7 @@
 "use client";
 
 import { belowHeadSpacerBottom, pageTopSpacer, SectionHeadingVariant } from '@/constant'
-import { SectionHeading } from '@/shared/global-styling/Ui'
+import { SectionHeading, SubSectionHeading } from '@/shared/global-styling/Ui'
 import { Box, Card, CardContent, Container, List, ListItem, ListItemText, Stack, Typography } from '@mui/material';
 import React from 'react'
 import { motion } from 'framer-motion';
@@ -45,7 +45,10 @@ const Experience = () => {
     return (
         <Container maxWidth="xl" sx={{ my: pageTopSpacer }}>
             {/* Section Heading */}
-            <SectionHeading variant={SectionHeadingVariant} sx={belowHeadSpacerBottom}>My Experience</SectionHeading>
+            {/* <SectionHeading variant={SectionHeadingVariant} sx={belowHeadSpacerBottom}>My Experience</SectionHeading> */}
+            <SubSectionHeading variant="h4">
+              My Experience
+            </SubSectionHeading>
 
             <Stack spacing={3}>
                 {experiences.map((exp, index) => (
