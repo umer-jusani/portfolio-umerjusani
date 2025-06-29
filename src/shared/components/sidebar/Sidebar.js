@@ -1,5 +1,5 @@
 "use client"
-import { drawerWidth } from '@/constant';
+import { drawerWidth, socialMediaIcons } from '@/constant';
 import { CloudUploadIcon, FacebookIcon, GitHubIcon, InstagramIcon, LinkedInIcon, MediumIcon, user } from '@/shared/assets';
 import routes from '@/shared/route';
 import { IconButton, Stack, useMediaQuery } from '@mui/material';
@@ -159,10 +159,15 @@ export default function Sidebar() {
                     bottom={0}
                     sx={{ mt: 'auto' }}
                 >
-                    <IconButton>
-                        <InstagramIcon fontSize='10' sx={{ color: 'text.primary' }} />
-                    </IconButton>
-                    <IconButton>
+                    {socialMediaIcons?.map(ele => (
+                        <IconButton onClick={() => {
+                            window.open(ele.link, '_blank')
+                        }}>
+                            {ele.icon({ color: "text.primary" })}
+                        </IconButton>
+                    ))}
+
+                    {/* <IconButton>
                         <FacebookIcon fontSize='10' sx={{ color: 'text.primary' }} />
                     </IconButton>
                     <IconButton>
@@ -173,7 +178,7 @@ export default function Sidebar() {
                     </IconButton>
                     <IconButton>
                         <MediumIcon fontSize='10' sx={{ color: 'text.primary' }} />
-                    </IconButton>
+                    </IconButton> */}
                 </Stack>
             </StyledDrawer>
 

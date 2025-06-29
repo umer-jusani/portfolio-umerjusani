@@ -11,11 +11,11 @@ export const belowHeadSpacerBottom = {
 
 
 export const socialMediaIcons = [
-    { icon: <LinkedInIcon />, name: 'Linkedin', link: "https://www.linkedin.com/in/umer-jusani/" },
-    { icon: <FacebookIcon />, name: 'Facebook', link: "https://www.facebook.com/profile.php?id=100009899801154" },
-    { icon: <InstagramIcon />, name: 'Instagram', link: "https://www.instagram.com/muhammadjusani/" },
-    { icon: <GitHubIcon />, name: 'GitHub', link: "https://github.com/umer-jusani?tab=repositories" },
-    { icon: <MediumIcon />, name: 'Medium', link: "https://medium.com/@umer.jusani.04" },
+    { icon: (props = {}) => <LinkedInIcon sx={props} />, name: 'Linkedin', link: "https://www.linkedin.com/in/umer-jusani/" },
+    { icon: (props = {}) => <FacebookIcon sx={props} />, name: 'Facebook', link: "https://www.facebook.com/profile.php?id=100009899801154" },
+    { icon: (props = {}) => <InstagramIcon sx={props} />, name: 'Instagram', link: "https://www.instagram.com/muhammadjusani/" },
+    { icon: (props = {}) => <GitHubIcon sx={props} />, name: 'GitHub', link: "https://github.com/umer-jusani?tab=repositories" },
+    { icon: (props = {}) => <MediumIcon sx={props} />, name: 'Medium', link: "https://medium.com/@umer.jusani.04" },
 ];
 
 //MySkills

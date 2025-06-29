@@ -22,7 +22,7 @@ const SocialMediaSpeedDial = () => {
                 {socialMediaIcons.map((action) => (
                     <SpeedDialAction
                         key={action.name}
-                        icon={action.icon}
+                        icon={action.icon()}
                         tooltipTitle={action.name}
                         onClick={() => {
                             window.open(action.link, '_blank')
