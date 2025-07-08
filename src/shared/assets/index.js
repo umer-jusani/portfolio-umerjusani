@@ -44,5 +44,6 @@ import Foodies from "./images/foodies1.png"
 import LinkedinClone from "./images/linkedinClone.png"
 import ManageProducts from "./images/manageProducts.png"
 import QuicApp from "./images/quiz.png"
+import TenderWordWebsite from "./images/tenderword-website.png"
 
-export { user, bannerImage, userBgLess, AvatarImage, MaterialUiIcon, FirebaseIcon, CursorAiIcon, HtmlIcon, CssIcon, JsIcon, TailwindIcon, BootstrapIcon, DisneyClone, FarCry4, Foodies, LinkedinClone, ManageProducts, QuicApp, }
+export { user, bannerImage, userBgLess, AvatarImage, MaterialUiIcon, FirebaseIcon, CursorAiIcon, HtmlIcon, CssIcon, JsIcon, TailwindIcon, BootstrapIcon, DisneyClone, FarCry4, Foodies, LinkedinClone, ManageProducts, QuicApp, TenderWordWebsite }

@@ -1,4 +1,4 @@
-import { BootstrapIcon, CssIcon, CursorAiIcon, DisneyClone, FacebookIcon, FarCry4, FirebaseIcon, GitHubIcon, HtmlIcon, InstagramIcon, JsIcon, LinkedinAutoApply, LinkedinClone, LinkedInIcon, ManageProducts, MaterialUiIcon, MediumIcon, TailwindIcon } from "./shared/assets";
+import { BootstrapIcon, CssIcon, CursorAiIcon, DisneyClone, FacebookIcon, FarCry4, FirebaseIcon, GitHubIcon, HtmlIcon, InstagramIcon, JsIcon, LinkedinAutoApply, LinkedinClone, LinkedInIcon, ManageProducts, MaterialUiIcon, MediumIcon, TailwindIcon, TenderWordWebsite } from "./shared/assets";
 
 export const drawerWidth = 280;
 export const flowSpacer = 6;
@@ -162,5 +162,37 @@ export const projects = [
                 color: "rgba(0, 159, 188, 0.4)"
             }
         ]
-    }
+    },
+    {
+        title: "Tender Word (static Website)",
+        image: TenderWordWebsite.src,
+        description: "This is marketing website which tell what our platform does. It does let you sell products to a right person",
+        link: "https://staging.tenderword.com/",
+        technologies: [
+            {
+                title: "Next.js",
+                color: "rgba(0, 159, 188, 0.4)"
+            },
+            {
+                title: "Mui",
+                color: "rgba(0, 159, 188, 0.4)"
+            },
+        ]
+    },
+    {
+        title: "Tender Word (static Website)",
+        image: TenderWordWebsite.src,
+        description: "This is marketing website which tell what our platform does. It does let you sell products to a right person",
+        link: "https://globalist.live/news",
+        technologies: [
+            {
+                title: "Next.js",
+                color: "rgba(0, 159, 188, 0.4)"
+            },
+            {
+                title: "Mui",
+                color: "rgba(0, 159, 188, 0.4)"
+            },
+        ]
+    },
 ]
